@@ -31,7 +31,7 @@ mod my_module {
     // TODO: Complete the function signature!
     pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
         // TODO: Complete the output declaration!
-        let mut output: Vec<String> = vec![];
+        let mut output: Vec<String> = Vec::with_capacity(input.len());
         for (string, command) in input.iter() {
             // TODO: Complete the function body. You can do it!
             match command{
@@ -53,7 +53,7 @@ mod my_module {
 #[cfg(test)]
 mod tests {
     // TODO: What do we need to import to have `transformer` in scope?
-    use my_module::transformer;
+    use super::my_module::transformer;
     use super::Command;
 
     #[test]
